@@ -13,7 +13,9 @@ h2{
     margin-top: 60px;
     color: #144578;
 }
+
 .anniu{
+    display: block;
     background: #403D61;
     width: 200px;
     height: 60px;
@@ -26,6 +28,7 @@ h2{
     border-radius: 6px;
     color: #00D2DC;
     transition: box-shadow 1s;
+    text-decoration: none;
 }
 .anniu:hover{
     box-shadow: 0px 4px 25px 5px rgba(0,0,0,0.75);

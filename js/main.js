@@ -1,3 +1,4 @@
 anniu.onclick=function(){
-dowload()
+download('https://lifliyli.github.io/shuju/index.html', 'lzwme-index.html');
+
 }
