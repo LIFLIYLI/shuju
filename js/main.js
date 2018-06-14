@@ -1,0 +1,3 @@
+anniu.onclick=function(){
+dowload()
+}

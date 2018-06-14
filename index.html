@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS 里的数据类型转换</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="a">
+        <h2>字符串与编码转换</h2>
+        <p>
+            把字符串转为Base64编码：btoa()</br>
+            把Base64编码转为字符串：atob()
+        </p>
+    </div>
+    <div>
+        <h2>一般类型转字符串</h2>
+        <p>
+            1：(1).toString()结果为字符串'1'，'1'</br>
+            2: window.String(1)结果为字符串'1'，'1'</br>
+            3: 任何类型加上一个空字符也可以转为字符串，X+''='X'
+        </p>
+        <h2>任何类型转为Boolean</h2>
+        <p>方法1：Boolean()，括号里面输入被转换的值。</br>
+           方法2：在类型前面加上两个感叹号视为转布尔型，例：!!X</br>
+            其中所有类型中只有5个特殊值转布尔结果为false，其他的全为true。</br>
+            分别如下：</br>
+            !!0=false</br>
+            !!NaN=false</br>
+            !!null=false</br>
+            !!undefined=false</br>
+            !!''=false
+        </p>
+        <h2>其他类型转number</h2>
+        <p>
+        1:Number('1')===1，意为把字符串'1'转化为数值1。</br>
+        2:parseInt('1',10)===1，parseInt也可以把字符串转化为数值，</br>
+          且ParseInt还可以接受括号内的第二个参数，第二个参数代表要转换的进制类型。</br>
+        3：parseFloat('1.23')是把字符串转化为浮点数，值为1.23。</br>
+        4：字符串减一个0也可以转换成数值，'1'-0===1</br>
+        5:前面加上一个+号转化成数值，+'.1'===0.1
+        </p>
+        <h2>深拷贝与浅拷贝</h2>
+        <p>
+            1:深拷贝</br>
+            var a ={name:'a'}</br>
+            var b = a</br>
+            b = {name:'b'}</br>
+            那么a.name=a,b的属性改变而a不变称之为深拷贝。</br>
+            2：浅拷贝</br>
+            var a ={name:'a'}</br>
+            var b = a</br>
+            b.name='b'</br>
+            则a.name='b'</br>
+            改变了b的属性a也随之改变称之为浅拷贝。</br>
+        </p>
+        <h2>GC垃圾回收</h2>
+        <p>如果一个对象没有被引用，它就是垃圾，将会被回收。</p>
+    </div>
+    <div class="anniu" id="anniu">下载文章</div>
+
+</body>
+<script src="./js/main.js"></script> 
+</html>
